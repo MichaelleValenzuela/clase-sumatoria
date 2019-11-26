@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int sumatoria (int m, int n);
+
+int main()
+{
+	int inicio, fin;
+	cout << "Empezar la sumatoria en " ;
+	cin >> inicio;
+	while (inicio < 0)
+		{
+			cout << "Solo se admiten enteros positivos!" << endl;
+			cout << "Empezar la sumatoria en " ;
+			cin >> inicio;
+		}
+	cout << "Hasta ";
+	cin >> fin;
+	while (fin <= 0)
+		{
+			cout << "Solo se admiten enteros positivos!" << endl;
+			cout << "Hasta " ;
+			cin >> fin;
+		}
+	
+	cout << " La sumatoria desde " << inicio << " hasta " << fin << " es " << sumatoria (inicio, fin) << endl;
+	
+	return 0;
+}
+
+
+int sumatoria (int m, int n)
+{
+	int resultado = 0;
+	for (int i = m; i <= n; i++)
+	{
+		resultado = resultado + i;
+	}
+	return resultado;
+}
